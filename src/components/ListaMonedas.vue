@@ -51,7 +51,6 @@
         </div>
       </template>
     </b-table>
-    <b-pagination align="center" total-rows="100" per-page="10" @change="changePage"/>    
   </div>
 </template>
 
@@ -90,7 +89,7 @@ export default {
   methods: {
     getCoins: async function() {
       this.coins = [];
-      await axios.get(COINMARKETCAP_API_URI + `/v2/ticker/?start=${(this.currentPage-1)*10}&limit=${GET_TOTALCOINS}`)
+      await axios.get(COINMARKETCAP_API_URI + `/v2/ticker/?start=${((this.currentPage-1)*10)+1}&limit=${GET_TOTALCOINS}`)
         .then((resp) => {
           const coinsAll = resp.data.data;
           // this.resultado =  coinsAll[1].name;
