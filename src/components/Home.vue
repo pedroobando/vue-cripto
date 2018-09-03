@@ -5,7 +5,9 @@
         <b-jumbotron header="Crypto Compare" lead="Bootstrap 4 Components for Vue.js 2" >
           <p>Este sitio web indexa las 100 principales criptomonedas por capitalización de mercado, mostrando un forma de comparar el rendimiento
               y el rango de la criptomoneda durante la última semana.</p>
-          <p>Aplicacion original de <a href="https://scotch.io/tutorials/build-a-cryptocurrency-comparison-site-with-vuejs">scotch.io</a></p>
+          <p>Aplicacion original de <a href="https://scotch.io/tutorials/build-a-cryptocurrency-comparison-site-with-vuejs">scotch.io</a> |
+           Esta aplicacion usa <a href="https://bootstrap-vue.js.org/">Bootstrap-Vue</a></p>
+
         </b-jumbotron>
       </b-col>
     </b-row>
