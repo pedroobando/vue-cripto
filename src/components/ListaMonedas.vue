@@ -11,7 +11,7 @@
         <div style="width:180px">
         <img v-bind:src="(data.item.url)"/>
         &nbsp;
-        <b-link v-bind:to="getCoinCurrency(data.item.name)">{{data.item.name}}</b-link>
+        <b-link v-bind:to="getCoinCurrency(data.item.id)">{{data.item.name}}</b-link>
         </div>
       </template>
       <template slot="price_usd" slot-scope="data">
@@ -102,7 +102,7 @@ export default {
             this.coins.push({
               id: coinsAll[key].id, name: coinsAll[key].name, symbol: coinsAll[key].symbol, rank: coinsAll[key].rank,
               url: this.getCoinImage(coinsAll[key].id),
-              price_usd: coinsAll[key].quotes.USD.price, price_btc: coinsAll[key].quotes.USD.price / this.precioBTC,  volume_24h:coinsAll[key].quotes.USD.volume_24h,
+              price_usd: coinsAll[key].quotes.USD.price, price_btc: coinsAll[key].quotes.USD.price / this.precioBTC, volume_24h: coinsAll[key].quotes.USD.volume_24h,
               percent_change_1h: coinsAll[key].quotes.USD.percent_change_1h, percent_change_24h: coinsAll[key].quotes.USD.percent_change_24h,
               percent_change_7d: coinsAll[key].quotes.USD.percent_change_7d
              })
@@ -144,7 +144,7 @@ export default {
   },
   created: function() {
     this.getCoins();
-    this.setTimer();    
+    this.setTimer();
   }
 }
 </script>
